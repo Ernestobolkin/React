@@ -30,7 +30,7 @@ export const Card=(props)=>{
         <div>{props.title}</div>
         <div>{props.text}</div>
         <div style={{display: "flex"}}>
-          <Buttons text="reload"/>
+          <Buttons text="SHARE"/>
           <Buttons text="EXPLORE"/>
         </div>
       </div>
