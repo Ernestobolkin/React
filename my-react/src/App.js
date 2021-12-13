@@ -8,8 +8,8 @@ import { Colored } from "./components/7.3_colord_Inc_and_dec/colord";
 const App = () => {
   return (
     <div>
-      {/* <BtnContainer />
-      <Cards />
+      {/* <BtnContainer /> */}
+      {/* <Cards />
       <Input_OutPut/> */}
       {/* <HideNSeek /> */}
       <Colored />
