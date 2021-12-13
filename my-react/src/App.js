@@ -1,16 +1,11 @@
-// import { Container } from "./components/2.1_hello_world/Container"
-// import { Container2 } from './components/2.2_basic/Container2';
-// import { Boxes } from './components/3.1_boxes/Container3';
-import { OverAll } from "./components/3.2_quiz/Quiz"
-const App = () => {
+import React from "react";
+import { BtnContainer } from "./components/4.1_buttons/BtnContainer";
 
+const App = () => {
   return (
     <div>
-      {/* <Container2 />
-      <Container />
-      <Boxes />  */}
-      <OverAll/>
+      <BtnContainer />
     </div>
-  )
-}
-export default App
+  );
+};
+export default App;

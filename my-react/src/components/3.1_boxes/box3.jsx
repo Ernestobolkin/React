@@ -14,6 +14,7 @@ export const Box3 = () => {
       }}
     >
       <Box4 />
+      <Box4 />
     </div>
   );
 };
