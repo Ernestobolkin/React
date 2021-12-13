@@ -3,7 +3,7 @@ import React from "react";
 export class Input_OutPut extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { num: 0 };
+    this.state = { num: 0};
   }
   Inc(){
     this.setState({num:this.state.num+1})
@@ -14,6 +14,7 @@ export class Input_OutPut extends React.Component {
   render() {
     return (
       <div style={{ display: "flex" }}>
+        {/* <input type="text" /> */}
         <button onClick={this.Inc.bind(this)} id="btn" style={{ marginRight: "10px" }}>
           increment
         </button>

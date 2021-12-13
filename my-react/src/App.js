@@ -1,26 +1,18 @@
 import React from "react";
 // import { BtnContainer } from "./components/4.1_buttons/BtnContainer";
 // import { Cards } from "./components/4.2_cards/cards";
-import { Input_OutPut } from "./components/7.1_increment/increment";
+// import { Input_OutPut } from "./components/7.1_increment/increment";
+import { HideNSeek } from "./components/7.2_hide_and_seek/hideNseek";
 
 const App = () => {
   return (
     <div>
       {/* <BtnContainer />
-      <Cards /> */}
-      <Input_OutPut/>
+      <Cards />
+      <Input_OutPut/> */}
+      <HideNSeek />
     </div>
   );
 };
 
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <BtnContainer />
-//       </div>
-//     );
-//   }
-// }
 export default App;
