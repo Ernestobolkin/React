@@ -15,10 +15,10 @@ export class Input_OutPut extends React.Component {
     return (
       <div style={{ display: "flex" }}>
         {/* <input type="text" /> */}
-        <button onClick={this.Inc.bind(this)} id="btn" style={{ marginRight: "10px" }}>
+        <button onClick={this.Inc.bind(this)} style={{ marginRight: "10px" }}>
           increment
         </button>
-        <button onClick={this.Dec.bind(this)} id="btn" style={{ marginRight: "10px" }}>
+        <button onClick={this.Dec.bind(this)} style={{ marginRight: "10px" }}>
           decrement
         </button>
         <label htmlFor="btn">{this.state.num}</label>
