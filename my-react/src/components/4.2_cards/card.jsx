@@ -1,7 +1,7 @@
 import React from "react";
 import { Buttons } from "../4.1_buttons/btn1";
 
-export const Card = (props) => {
+export const Card=(props)=>{
   return (
     <div>
       <div
@@ -30,10 +30,11 @@ export const Card = (props) => {
         <div>{props.title}</div>
         <div>{props.text}</div>
         <div style={{display: "flex"}}>
-          <Buttons text="SHERE"/>
+          <Buttons text="reload"/>
           <Buttons text="EXPLORE"/>
         </div>
       </div>
     </div>
   );
 };
+
