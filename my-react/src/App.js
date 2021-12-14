@@ -1,10 +1,10 @@
 import React from "react";
-import { Boxes } from "./components/8.2_changing_box/boxes";
+import { SpinnerContainer } from "./components/9.1_spinners/container";
 
 const App = () => {
   return (
     <div>
-      <Boxes />
+      <SpinnerContainer />
     </div>
   );
 };

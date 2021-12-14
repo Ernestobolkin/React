@@ -14,6 +14,7 @@ export class ContainerCircleBox extends React.Component {
       this.setState({ color: "black" });
     }, 3000);
   }
+
   componentDidUpdate() {
     setTimeout(() => {
       this.setState({ radius: "50px" });
