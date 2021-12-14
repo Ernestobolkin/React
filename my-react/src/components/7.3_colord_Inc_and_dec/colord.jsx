@@ -20,23 +20,12 @@ export class Colored extends React.Component {
       }
       return {
         color: newColor,
-        num: newNum
-      }
+        num: newNum,
+      };
+
     });
-
-    
-    // if (this.state.num > 0) {
-    //   console.log(this.state.num);
-    //   this.setState((prevState) => {
-    //     return { color: (prevState.color = "green") };
-    //   });
-    // } else {
-    //   this.setState((prevState) => {
-    //     return { color: (prevState.color = "") };
-    //   });
-    // }
-
   }
+  
   Dec() {
     if (this.state.num < 0) {
       console.log(this.state.num);

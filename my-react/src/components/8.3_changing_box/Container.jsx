@@ -1,25 +1,27 @@
 import React from "react";
 import { ChangeBox } from "./box";
 
+let num = 0;
 export class ContainerCircleBox extends React.Component {
-  state = { radius: "" ,color:"green"};
+  state = { radius: "", color: "" };
+
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ color: "red" });
+    setInterval(() => {
+      let color2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      this.setState({ color: color2 });
+      num++;
+      this.testing();
     }, 1000);
-    setTimeout(() => {
-      this.setState({ color: "blue" });
-    }, 2000);
-    setTimeout(() => {
-      this.setState({ color: "black" });
-    }, 3000);
+  }
+  testing() {
+    if (num % 5 === 0) {
+      this.setState({ radius: "50px" });
+      num = 0;
+    } else {
+      this.setState({ radius: "" });
+    }
   }
 
-  componentDidUpdate() {
-    setTimeout(() => {
-      this.setState({ radius: "50px" });
-    }, 5000);
-  }
   render() {
     return (
       <div>
