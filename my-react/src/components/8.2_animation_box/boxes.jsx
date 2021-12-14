@@ -1,24 +1,33 @@
 import React from "react";
 import { Container } from "./container";
 
+let randomColor = "black";
+
 export class Boxes extends React.Component {
   state = { position: "-500px" };
+
   componentDidMount() {
-    console.log("first");
     setTimeout(() => {
       this.setState({ position: "0" });
     }, 1000);
   }
+
   componentDidUpdate() {
-    console.log("second");
-    setTimeout(() => {
-      this.setState({ position: "-500px" });
-    }, 4000);
+    if (this.state.position === "0") {
+      setTimeout(() => {
+        this.setState({ position: "-500px" });
+        randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }, 4000);
+    } else {
+      setTimeout(() => {
+        this.setState({ position: "0" });
+      }, 1000);
+    }
   }
   render() {
     return (
       <div>
-        <Container position={this.state.position} />
+        <Container position={this.state.position} color={randomColor} />
       </div>
     );
   }
