@@ -8,20 +8,51 @@ export class Colored extends React.Component {
     this.HandleChange = this.HandleChange.bind(this);
   }
   Inc() {
-    if (this.state.num > 0) {
-      this.setState({ color: (this.state.color = "green") });
-    } else {
-      this.setState({ color: (this.state.color = "") });
-    }
-    this.setState({ num: this.state.num + this.state.value });
+
+    this.setState((prevState) => {
+      let newNum = prevState.num + 1;
+      let newColor = "";
+      if (newNum > 0) {
+        newColor = "green";
+      }
+      if (newNum < 0) {
+        newColor = "red";
+      }
+      return {
+        color: newColor,
+        num: newNum
+      }
+    });
+
+    
+    // if (this.state.num > 0) {
+    //   console.log(this.state.num);
+    //   this.setState((prevState) => {
+    //     return { color: (prevState.color = "green") };
+    //   });
+    // } else {
+    //   this.setState((prevState) => {
+    //     return { color: (prevState.color = "") };
+    //   });
+    // }
+
   }
   Dec() {
     if (this.state.num < 0) {
-      this.setState({ color: (this.state.color = "red") });
+      console.log(this.state.num);
+      this.setState((prevState) => {
+        return { color: (prevState.color = "red") };
+      });
     } else {
-      this.setState({ color: (this.state.color = "") });
+      this.setState((prevState) => {
+        {
+          color: prevState.color = "";
+        }
+      });
     }
-    this.setState({ num: this.state.num - this.state.value });
+    this.setState((prevState) => {
+      return { num: prevState.num - 1 };
+    });
   }
   HandleChange(e) {
     console.log(e);
@@ -33,7 +64,7 @@ export class Colored extends React.Component {
         <input
           type="text"
           value={this.state.value}
-          onChange={(e)=>this.HandleChange(e)}
+          onChange={(e) => this.HandleChange(e)}
         />
         <button onClick={this.Inc.bind(this)} style={{ marginRight: "10px" }}>
           increment
