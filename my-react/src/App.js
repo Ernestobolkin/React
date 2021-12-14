@@ -1,10 +1,10 @@
 import React from "react";
-import { Favorit } from "./components/8.1_life_cycle_methods/cycle";
+import { Boxes } from "./components/8.2_changing_box/boxes";
 
 const App = () => {
   return (
     <div>
-      <Favorit />
+      <Boxes />
     </div>
   );
 };
