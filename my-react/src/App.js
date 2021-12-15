@@ -1,9 +1,11 @@
 import React from "react";
-import { FatherContainer } from "./components/11.1_child_to_father/Father";
+import { CheckContiner } from "./components/11.2_cheackBox/CheckBoxContainer";
+
+
 const App = () => {
   return (
     <div>
-      <FatherContainer />
+      <CheckContiner />
     </div>
   );
 };

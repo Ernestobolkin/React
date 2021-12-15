@@ -20,7 +20,6 @@ export class FatherContainer extends React.Component {
     this.setState({ selectedColor: color });
   };
 
-  componentDidMount() {}
   render() {
     return (
       <div>
