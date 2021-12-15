@@ -1,10 +1,9 @@
 import React from "react";
-import { Form } from "./components/11.3_formReview/form";
-
+import { CheckContiner } from "./components/11.2_cheackBox/CheckBoxContainer";
 const App = () => {
   return (
     <div>
-      <Form />
+      <CheckContiner />
     </div>
   );
 };

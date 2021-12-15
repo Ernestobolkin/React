@@ -30,12 +30,16 @@ export class CheckContiner extends React.Component {
     this.state = {
     };
   }
+  ChangeDef=()=>{
+    console.log("works");
+  }
   render() {
     return (
       <div>
         {content.map((box) => {
           return (
             <CheckBox
+              callback={this.ChangeDef}
               checked={box.checked}
               key={box.id}
               id={box.id}
