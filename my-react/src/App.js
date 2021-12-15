@@ -1,9 +1,9 @@
 import React from "react";
-import { CheckContiner } from "./components/11.2_cheackBox/CheckBoxContainer";
+import { Boxes } from "./components/8.2_animation_box/boxes";
 const App = () => {
   return (
     <div>
-      <CheckContiner />
+      <Boxes />
     </div>
   );
 };
