@@ -6,7 +6,6 @@ export class ContainerCircleBox extends React.Component {
   state = { radius: "", color: "" };
 
   componentDidMount() {
-
     setInterval(() => {
       let color2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
       this.setState({ color: color2 });
@@ -16,7 +15,7 @@ export class ContainerCircleBox extends React.Component {
     }, 1000);
     console.log("first");
   }
-
+  
   testing() {
     if (num % 5 === 0) {
       this.setState({ radius: "50px" });
