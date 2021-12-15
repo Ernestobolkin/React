@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "./container";
 
 let randomColor = "black";
-
 export class Boxes extends React.Component {
   state = { position: "-500px" };
 
@@ -11,7 +10,6 @@ export class Boxes extends React.Component {
       this.setState({ position: "0" });
     }, 1000);
   }
-
   componentDidUpdate() {
     if (this.state.position === "0") {
       setTimeout(() => {
