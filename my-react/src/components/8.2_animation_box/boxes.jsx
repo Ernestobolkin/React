@@ -20,6 +20,7 @@ export class Boxes extends React.Component {
         this.setState({ position: "-500px" });
         randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
         randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        randomColor3 = "#" + Math.floor(Math.random() * 16777215).toString(16);
       }, 4000);
     } else {
       setTimeout(() => {
