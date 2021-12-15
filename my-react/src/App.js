@@ -1,9 +1,9 @@
 import React from "react";
-import { Boxes } from "./components/8.2_animation_box/boxes";
+import { FormContainer } from "./components/11.3_formReview/formContainer";
 const App = () => {
   return (
     <div>
-      <Boxes />
+      <FormContainer />
     </div>
   );
 };

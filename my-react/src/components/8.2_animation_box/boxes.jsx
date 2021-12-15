@@ -8,7 +8,6 @@ export class Boxes extends React.Component {
   state = { 
     position: "-500px",
   };
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({ position: "0" });
