@@ -1,5 +1,6 @@
 import React from "react";
 import "./submit.style.css";
+import { Form } from "./form";
 
 export class FormContainer extends React.Component {
   state = {
@@ -19,17 +20,15 @@ export class FormContainer extends React.Component {
   selectedValue = (event) => {
     this.setState({ age: event.target.value });
   };
-
-  displayChange=(e)=>{
+  displayChange = (e) => {
     console.log(e);
-    if(!e){
+    if (!e) {
       this.setState({ display: "none" });
-    }else{
+    } else {
       this.setState({ display: "none" });
       this.setState({ submited: "flex" });
     }
-  }
-
+  };
 
   render() {
     return (
@@ -54,7 +53,7 @@ export class FormContainer extends React.Component {
           </span>{" "}
           <br />
           <span>
-            Age: 
+            Age:
             <select
               onChange={this.selectedValue}
               id="select"
@@ -81,7 +80,6 @@ export class FormContainer extends React.Component {
             Submit
           </button>
         </form>
-
         <div className="submited" style={{ display: this.state.display }}>
           <p>
             <span>Name: {this.state.name}</span>
@@ -93,8 +91,12 @@ export class FormContainer extends React.Component {
             <span>Free text{this.state.freeText}</span>
             <br />
             <span>
-            <button onClick={()=>this.displayChange(true)} type="submit">agree</button>
-            <button onClick={()=>this.displayChange(false)} type="submit">change</button>
+              <button onClick={() => this.displayChange(true)} type="submit">
+                agree
+              </button>
+              <button onClick={() => this.displayChange(false)} type="submit">
+                change
+              </button>
             </span>
           </p>
         </div>
