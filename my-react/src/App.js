@@ -1,9 +1,9 @@
 import React from "react";
-import { FormContainer } from "./components/11.3_formReview/formContainer";
+import { Chuck } from "./components/12.1_chuck_norris/Chuck";
 const App = () => {
   return (
     <div>
-      <FormContainer />
+      <Chuck />
     </div>
   );
 };
