@@ -26,7 +26,9 @@ export class Chuck extends React.Component {
   chuckCategoris = async () => {
     const response = await axios.get(
       "https://api.chucknorris.io/jokes/categories"
-    );
+    ).catch((e)=>{
+      console.log(e);
+    });
     this.setState({ categoris: response.data });
   };
   btnClick = async (category) => {

@@ -1,9 +1,10 @@
 import React from "react";
-import { Chuck } from "./components/12.1_chuck_norris/Chuck";
+import { DataContainer } from "./components/13.1_data_massaging/dataContainer";
+
 const App = () => {
   return (
     <div>
-      <Chuck />
+      <DataContainer />
     </div>
   );
 };
