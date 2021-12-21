@@ -18,7 +18,6 @@ export class DataContainer extends React.Component {
         return +element.birthday.slice(-4) >= 1990;
       }),
     });
-    console.log(this.state.birthday);
   };
 
   render() {
