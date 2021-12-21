@@ -1,0 +1,24 @@
+$blue_1: #05dfd7;
+$green_2: #a3f7bf;
+$yellow_3: #fff591;
+$fontColor_1: #160040;
+@mixin size {
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+.navBar {
+  width: 100%;
+  height: 40px;
+  background-color: $fontColor_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .home,
+  .products {
+    @include size;
+  }
+  .home:hover,
+  .products:hover {
+    color: $yellow_3;
+  }
+}

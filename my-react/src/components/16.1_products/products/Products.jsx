@@ -1,6 +1,7 @@
 import React from "react";
 import { store } from "../data/data";
 import { Link } from "react-router-dom";
+import "./style.scss"
 
 export class Products extends React.Component {
   state = {
@@ -15,7 +16,7 @@ export class Products extends React.Component {
   generateProducts = () => {
     return this.state.store.map((Product) => {
       return (
-        <Link className="product" to={`/Products/${Product.id}/${Product.title}`} key={Product.id}>
+        <Link className="productItem" to={`/Products/${Product.id}/${Product.title}`} key={Product.id}>
           {Product.title}
         </Link>
       );
@@ -23,7 +24,7 @@ export class Products extends React.Component {
   };
   render() {
     return (
-      <div className="products">
+      <div className="productsContainer">
         {this.state.store && this.generateProducts()}
       </div>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 import "./submit.style.css";
-import { Form } from "./form";
 
 export class FormContainer extends React.Component {
   state = {
@@ -14,7 +13,6 @@ export class FormContainer extends React.Component {
 
   onFormNbtnSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.age);
     this.setState({ display: "flex" });
   };
   selectedValue = (event) => {
