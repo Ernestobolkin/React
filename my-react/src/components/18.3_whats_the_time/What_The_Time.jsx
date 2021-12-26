@@ -16,35 +16,35 @@ export const WhatTheTime = () => {
         setSec(value * 3600);
         break;
       default:
-      console.log("err");
+        console.log("err");
     }
   };
 
   return (
     <div>
       <div className="container">
-        <label>Seconds</label>
+        <label htmlFor="seconds">Seconds</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
-          name="seconds"
+          id="seconds"
           value={sec}
         />{" "}
         <br />
-        <label>minutes</label>
+        <label htmlFor="minutes">minutes</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
-          name="minutes"
-          value={sec/60}
+          id="minutes"
+          value={sec / 60}
         />
         <br />
-        <label>hours</label>
+        <label htmlFor="hours">hours</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
-          name="hours"
-          value={sec/3600}
+          id="hours"
+          value={sec / 3600}
         />
       </div>
     </div>
