@@ -1,16 +1,10 @@
 import React from "react";
-import HomePageApp from "./components/16.1_products/homePageApp";
+import { TextFunc } from "./components/18.2_text/text";
 
 const App = () => {
   return (
     <div>
-      <HomePageApp/>
-    {/* <BrowserRouter>
-      <NavBar />
-      <Route path="/" exact component={HomePage} />
-      <Route path="/Products" exact component={Products} />
-      <Route path="/Products/:id/:title" exact component={ProductDetail} />
-    </BrowserRouter> */}
+      <TextFunc />
     </div>
   );
 };

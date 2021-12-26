@@ -1,0 +1,71 @@
+$blue_1: #05dfd7;
+$green_2: #a3f7bf;
+$yellow_3: #fff591;
+$pink_4: #fa26a0;
+$fontColor_1: #160040;
+
+@mixin size {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.yellow {
+  background-color: $yellow_3;
+}
+.pink {
+  background-color: $pink_4;
+}
+.blue {
+  background-color: $blue_1;
+}
+.green {
+  background-color: $green_2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .player {
+    &-title {
+      color: $pink_4;
+    }
+  }
+  .textContainer {
+    text-align: center;
+    h1 {
+      font-size: 1rem;
+    }
+    h1,
+    h2,
+    span {
+      color: $fontColor_1;
+    }
+  }
+  .block {
+    @include size;
+    text-align: center;
+  }
+
+  .squareContainer {
+    display: flex;
+    margin: 5px 0;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+  }
+
+  .testing {
+    .player {
+      &-title {
+        color: antiquewhite;
+      }
+    }
+  }
+}
