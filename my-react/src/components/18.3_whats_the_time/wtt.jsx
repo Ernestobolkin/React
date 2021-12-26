@@ -1,38 +1,29 @@
 import React, { useState } from "react";
 
 export const WhatTheTime = () => {
-  const [sec, setSec] = useState();
-  const [min, setMin] = useState();
-  const [hour, setHour] = useState();
+  const [sec, setSec] = useState(null);
 
   const onChangeFunc = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     switch (name) {
       case "seconds":
         setSec(value);
-        setMin(value / 60);
-        setHour(value / 3600);
         break;
       case "minutes":
         setSec(60 * value);
-        setMin(value);
-        setHour(value / 60);
         break;
       case "hours":
-        setSec(3600 * value);
-        setMin(60 / value);
-        setHour(value);
+        setSec(value * 3600);
         break;
       default:
-        break;
+      console.log("err");
     }
   };
 
   return (
     <div>
       <div className="container">
-        <label htmlFor="">Seconds</label>
+        <label>Seconds</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
@@ -40,20 +31,20 @@ export const WhatTheTime = () => {
           value={sec}
         />{" "}
         <br />
-        <label htmlFor="">minutes</label>
+        <label>minutes</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
           name="minutes"
-          value={min}
+          value={sec/60}
         />
         <br />
-        <label htmlFor="">hours</label>
+        <label>hours</label>
         <input
           onChange={(e) => onChangeFunc(e)}
           type="number"
           name="hours"
-          value={hour}
+          value={sec/3600}
         />
       </div>
     </div>
