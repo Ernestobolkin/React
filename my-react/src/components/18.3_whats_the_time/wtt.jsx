@@ -6,18 +6,26 @@ export const WhatTheTime = () => {
   const [hour, setHour] = useState();
 
   const onChangeFunc = (e) => {
-    switch (e.target.name) {
+    const { name, value } = e.target;
+    console.log(name, value);
+    switch (name) {
       case "seconds":
-        setSec(e.target.value);
+        setSec(value);
+        setMin(value / 60);
+        setHour(value / 3600);
         break;
       case "minutes":
-        setMin(e.target.value);
+        setSec(60 * value);
+        setMin(value);
+        setHour(value / 60);
         break;
       case "hours":
-        setHour(e.target.value);
+        setSec(3600 * value);
+        setMin(60 / value);
+        setHour(value);
         break;
       default:
-        console.log("error");
+        break;
     }
   };
 
