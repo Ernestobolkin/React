@@ -1,0 +1,13 @@
+.container{
+  position: absolute;
+  top: 10%;
+  left: 23%;
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.readMore{
+  color: blue;
+  text-shadow: 2px 2px 5px 5px #eee ;
+  cursor: pointer;
+}
