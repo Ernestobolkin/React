@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter, Route, Link } from "react-router-dom";
 import { MoackApi } from "../api/api";
 import { CreateNewItem } from "../addingItem/newItem";
 
@@ -58,12 +57,10 @@ export class UsersPage extends React.Component {
     this.getData();
   }
 
-
-
   render() {
     return (
       <div>
-        <button onClick={(e)=>this.addItems(e)}>Add Item</button>
+        <button onClick={(e) => this.addItems(e)}>Add Item</button>
         {}
         <div
           style={{
