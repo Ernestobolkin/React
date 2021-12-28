@@ -1,0 +1,46 @@
+.img1 {
+  width: 500px;
+  height: 400px;
+  background: url("./dog-black.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.img2 {
+  width: 500px;
+  height: 400px;
+  background: url("./2ndDog-Black.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.colordImg1{
+  width: 500px;
+  height: 400px;
+  background: url("./dog.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.colordImg2{
+  width: 500px;
+  height: 400px;
+  background: url("./2ndDog.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
