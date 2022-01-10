@@ -1,36 +1,53 @@
-import React from "react";
-import {ChangeBox} from "./box"
+// import { Data } from "./api";
+import { MoackApi } from "./api";
+import { useEffect, useState } from "react";
+import "./style.scss";
 
-let num = 0;
-export class MyPj extends React.Component {
-  state = { radius: "", color: "" };
+export const TestingApi = () => {
+  const [imgs, setImgs] = useState([]);
 
-  componentDidMount() {
-    setInterval(() => {
-      let color2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
-      this.setState({ color: color2 });
-      num++;
-      console.log("2nd");
-      this.testing();
-    }, 1000);
-    console.log("first");
-  }
-  
-  testing() {
-    if (num % 5 === 0) {
-      this.setState({ radius: "50px" });
-      num = 0;
-    } else {
-      this.setState({ radius: "" });
-    }
-    console.log("3nd");
-  }
+  const dataResponse = async () => {
+    const data = await MoackApi.getProductsData();
+    setImgs(data);
+  };
 
-  render() {
-    return (
-      <div>
-        <ChangeBox radius={this.state.radius} color={this.state.color} />
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    dataResponse();
+  }, []);
+
+  const hoverImgIn = (e, backImg) => {
+    e.src = backImg;
+  };
+
+  const hoverImgOut = (e, frontImg) => {
+    e.src = frontImg;
+  };
+
+  const renderItems = () => {
+    return imgs.map((item) => {
+      return (
+        <div key={item.id} className="cart">
+          <img
+            onMouseEnter={(e) => hoverImgIn(e.target, item.backImg)}
+            onMouseLeave={(e) => hoverImgOut(e.target, item.frontImg)}
+            // onMouseEnter={(e) => setIsHover(!isHover)}
+            // onMouseLeave={(e) => setIsHover(!isHover)}
+            src={item.frontImg}
+            alt="skate"
+          />
+          <p>{item.brand}</p>
+          <p>Size : {item.size}</p>
+          <p>Price : ${item.price}</p>
+          <br />
+        </div>
+      );
+    });
+  };
+
+  return (
+    <div>
+      {renderItems()}
+      <button onClick={() => console.log("imgs")}>click</button>
+    </div>
+  );
+};
