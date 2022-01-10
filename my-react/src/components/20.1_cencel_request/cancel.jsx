@@ -7,10 +7,9 @@ export const Cancel = () => {
     const [joke, setJoke] = useState([]);
 
     useEffect(() => {
-      // const cancelToken = axios.CancelToken;
       const source = axios.CancelToken.source();
       const getData = async () => {
-        const data = await axios
+        const { data } = await axios
           .get("https://api.chucknorris.io/jokes/random", {
             cancelToken: source.token,
           })
@@ -22,6 +21,8 @@ export const Cancel = () => {
       getData();
 
       return () => {
+        console.log(isFetch);
+        console.log("works");
         source.cancel();
       };
     }, []);
